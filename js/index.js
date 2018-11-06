@@ -56,7 +56,6 @@ function buildSection(){
     textboxButton.setAttribute('onclick', "buildTextbox()");
 
     //  build section body
-    sectionTitle.setAttribute("type", "text");
     sectionTitle.setAttribute("placeholder", "Section Title");
     sectionTitle.setAttribute("cols", "40");
     sectionTitle.setAttribute("rows", "1");
@@ -83,7 +82,6 @@ function buildTextbox(){
     var textbox = document.createElement('textarea');
 
     textbox.setAttribute("placeholder", "Section content...")
-    textbox.setAttribute("contenteditable", "true");
     textbox.setAttribute("cols", "50");
     textbox.setAttribute("rows", "10");
 
