@@ -4,43 +4,76 @@
     <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Text Tool</title>
-  </head>
-  <body>
-    <div id="main-container">
 
+    <title>Doc Builder</title>
+  </head>
+  <body style="background-color:lightgrey">
+    <div id="main-container">
+      <h3>
+        Use sections and content boxes to plan out the structure
+        of your document, fill them out, and "Submit".
+      </h3>
       <div id="main-section-controls-container">
         <!--main buttons in here-->
         <button onclick={buildSection()}>Create Section</button>
       </div>
 
       <div class="top-level-section-container">
-        <h2>Hey mate</h2>
         <form action="#" id="main" method="get" name="main">
           <span id="myForm"></span>
           <p></p><input type="submit" value="Submit">
+          <p></p><button onclick="clearElements()">Reset</button>
         </form>
       </div>
 
     </div>
 
-    <script id="section" type="text/html">
+    <!-- <script id="section" type="text/html">
       <div id="sub-section-controls-container">
-        <!--sub buttons in here-->
-        <button onclick={buildSection()}>Create Subsection</button>
+        sub buttons in here-->
+        <!-- <button onclick={buildSection()}>Create Subsection</button>
         <button onclick={buildTextbox()}>Create Content</button>
       </div>
       <div class="section-title">
         <textarea name="section-title-1" id="" placeholder="Section Title" cols="20" rows="1"></textarea>
-      </div>
-    </script>
+      </div> -->
+    <!-- </script> -->
 
-    <script id="textBox" type="text/html">
+    <!-- <script id="textBox" type="text/html">
       <div class="section-textbox-container">
         <textarea name="section-text-1" id="" placeholder="Section content..." cols="30" rows="10"></textarea>
       </div>
+    </script> -->
+
+    <!-- <script id="toolbar-template">
+      <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"><i>I</i>
+      </button>
+      <button class="fontStyle" onclick="document.execCommand( 'bold',false,null);" title="Bold Highlighted Text"><b>B</b>
+      </button>
+      <button class="fontStyle" onclick="document.execCommand( 'underline',false,null);"><u>U</u>
+      </button>
+    </script> -->
+
+    <script id = "toolbar1">
+      // <div id="toolBar2">
+      //   <img class="intLink" title="Bold" onclick="formatDoc('bold');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAInhI+pa+H9mJy0LhdgtrxzDG5WGFVk6aXqyk6Y9kXvKKNuLbb6zgMFADs=" />
+      //   <img class="intLink" title="Italic" onclick="formatDoc('italic');" src="data:image/gif;base64,R0lGODlhFgAWAKEDAAAAAF9vj5WIbf///yH5BAEAAAMALAAAAAAWABYAAAIjnI+py+0Po5x0gXvruEKHrF2BB1YiCWgbMFIYpsbyTNd2UwAAOw==" />
+      //   <img class="intLink" title="Underline" onclick="formatDoc('underline');" src="data:image/gif;base64,R0lGODlhFgAWAKECAAAAAF9vj////////yH5BAEAAAIALAAAAAAWABYAAAIrlI+py+0Po5zUgAsEzvEeL4Ea15EiJJ5PSqJmuwKBEKgxVuXWtun+DwxCCgA7" />
+      //   <img class="intLink" title="Numbered list" onclick="formatDoc('insertorderedlist');" src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAADljwliE35GjuaezxtHa7P///////yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKSespwjoRFvggCBUBoTFBeq6QIAysQnRHaEOzyaZ07Lu9lUBnC0UGQU1K52s6n5oEADs=" />
+      //   <img class="intLink" title="Dotted list" onclick="formatDoc('insertunorderedlist');" src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAAB1ChF9vj1iE33mOrqezxv///////yH5BAEAAAcALAAAAAAWABYAAAMyeLrc/jDKSesppNhGRlBAKIZRERBbqm6YtnbfMY7lud64UwiuKnigGQliQuWOyKQykgAAOw==" />
+      //   <img class="intLink" title="Delete indentation" onclick="formatDoc('outdent');" src="data:image/gif;base64,R0lGODlhFgAWAMIHAAAAADljwliE35GjuaezxtDV3NHa7P///yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKCQG9F2i7u8agQgyK1z2EIBil+TWqEMxhMczsYVJ3e4ahk+sFnAgtxSQDqWw6n5cEADs=" />
+      //   <img class="intLink" title="Add indentation" onclick="formatDoc('indent');" src="data:image/gif;base64,R0lGODlhFgAWAOMIAAAAADljwl9vj1iE35GjuaezxtDV3NHa7P///////////////////////////////yH5BAEAAAgALAAAAAAWABYAAAQ7EMlJq704650B/x8gemMpgugwHJNZXodKsO5oqUOgo5KhBwWESyMQsCRDHu9VOyk5TM9zSpFSr9gsJwIAOw==" />
+      // </div>
+      // <div id="textBox" contenteditable="true">
+      //   <p></p>
+      // </div>
+      // <p id="editMode"><input type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" /> <label
+      //     for="switchBox">Show HTML</label></p>
+      // <p><input type="submit" value="Send" /></p>
     </script>
+
     <script type="text/javascript" src="./js/text_tool.js"></script>
     <script type="text/javascript" src="./js/builders.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
   </body>
 </html>
