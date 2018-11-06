@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Text Tool</title>
+  </head>
+  <body>
+    <div id="main-container">
+
+      <div id="main-section-controls-container">
+        <!--main buttons in here-->
+        <button onclick={buildSection()}>Create Section</button>
+      </div>
+
+      <div class="top-level-section-container">
+        <h2>Hey mate</h2>
+        <form action="#" id="main" method="get" name="main">
+          <span id="myForm"></span>
+          <p></p><input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </div>
+
+    <script id="section" type="text/html">
+      <div id="sub-section-controls-container">
+        <!--sub buttons in here-->
+        <button onclick={buildSection()}>Create Subsection</button>
+        <button onclick={buildTextbox()}>Create Content</button>
+      </div>
+      <div class="section-title">
+        <textarea name="section-title-1" id="" placeholder="Section Title" cols="20" rows="1"></textarea>
+      </div>
+    </script>
+
+    <script id="textBox" type="text/html">
+      <div class="section-textbox-container">
+        <textarea name="section-text-1" id="" placeholder="Section content..." cols="30" rows="10"></textarea>
+      </div>
+    </script>
+    <script type="text/javascript" src="./js/text_tool.js"></script>
+    <script type="text/javascript" src="./js/builders.js"></script>
+  </body>
+</html>
